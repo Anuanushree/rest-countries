@@ -1,7 +1,7 @@
 function fetchdata() {
     return fetch("https://restcountries.com/v3.1/all")
         .then(response => response.json())
-    // .then(datas =>datas)
+    // .then(datas =>console.log(datas))
 }
 let d = document.createElement('div')
 d.setAttribute('class', 'container')
@@ -44,7 +44,7 @@ function createlist() {
 
                 let population = document.createElement('p');
                 population.setAttribute('class', 'text-center')
-                population.innerText = `Country code=${element.alpha3Code}`;
+                population.innerText = `Country code=${element.cca3}`;
                 cardbody.appendChild(population);
 
 
@@ -58,7 +58,7 @@ function createlist() {
                     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${element.name.common}&appid=b90b28e8b14e09c1f9110a26d3ffdc8b`, { method: "GET" })
                         .then(response => response.json())
                         .then(data => {
-                            alert(`The temperature of ${element.name} is ${data.coord.lon} Fahrenheit`)
+                            alert(`The temperature of ${element.name.common} is ${data.coord.lon} Fahrenheit`)
                         })
                         .catch(error => {
                             alert(`${error}`)
