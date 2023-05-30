@@ -1,0 +1,26 @@
+body {
+   background-color: gray;
+}
+
+.card-design {
+   color: white;
+   background: linear-gradient(to right, rgba(158, 150, 11, 0.877), rgba(2, 23, 2, 0.297));
+}
+
+.card-header {
+   background-color: black;
+   color: white;
+}
+
+#button:hover {
+   background-color: blue;
+}
+
+* {
+   /* margin-top: 10px; */
+   margin-bottom: 10px;
+}
+
+.card {
+   background-color:pink;
+}
